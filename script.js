@@ -215,7 +215,6 @@ document.getElementById("calcShippingBtn").addEventListener("click", () => {
     return;
   }
 
-  // Simulação simples baseada no início do CEP
   shippingCost = cep.startsWith("8") ? 18.00 : 32.00;
   msg.style.color = "#2e6f40";
   msg.textContent = "Prazo estimado: 1 a 2 dias úteis.";
@@ -267,7 +266,7 @@ document.getElementById("checkoutWhatsAppBtn").addEventListener("click", () => {
     return;
   }
 
-  const phone = "5541999990000"; // Substitua pelo seu número com DDD
+  const phone = "5541995494667";
   let message = "Olá, AgroVerde! Gostaria de fazer o seguinte pedido:\n\n";
 
   cart.forEach(item => {
