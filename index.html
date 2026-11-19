@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AgroVerde | Esterco Bovino Curtido e Peneirado</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Barra Superior -->
+  <div class="top-bar">
+    🌱 Entrega rápida para toda a região • Frete grátis acima de R$ 250,00
+  </div>
+
+  <!-- Cabeçalho -->
+  <header class="header">
+    <div class="container header-content">
+      <a href="#" class="logo">
+        <span class="logo-icon">🌿</span>
+        <div>
+          <strong>AgroVerde</strong>
+          <small>Adubação Orgânica</small>
+        </div>
+      </a>
+
+      <nav class="nav">
+        <a href="#beneficios">Benefícios</a>
+        <a href="#catalogo">Produtos</a>
+        <a href="#calculadora">Calculadora</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <button class="cart-btn" id="openCartBtn" aria-label="Abrir carrinho">
+        🛒 <span class="cart-text">Carrinho</span>
+        <span class="cart-badge" id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <span class="badge-hero">100% Natural • Sem Cheiro Forte • Livre de Ervas Daninhas</span>
+        <h1>Esterco de Vaca Curtido e Peneirado de Alta Pureza</h1>
+        <p>
+          Transforme o solo da sua horta, jardim, gramado ou lavoura. Matéria orgânica fermentada no tempo certo, rica em nutrientes e pronta para uso imediato.
+        </p>
+        <div class="hero-actions">
+          <a href="#catalogo" class="btn btn-primary">Ver Sacos e Preços</a>
+          <a href="#calculadora" class="btn btn-outline">Calcular Quantidade</a>
+        </div>
+        <div class="hero-stats">
+          <div>
+            <strong>+4.500</strong>
+            <span>Sacos entregues</span>
+          </div>
+          <div>
+            <strong>45 dias</strong>
+            <span>De curtimento controlado</span>
+          </div>
+          <div>
+            <strong>100%</strong>
+            <span>Livre de químicos</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="product-showcase">
+          <div class="sack-illustration">
+            <div class="sack-tag">QUALIDADE PREMIUM</div>
+            <div class="sack-icon">🐄🌱</div>
+            <h3>Esterco Bovino Curtido</h3>
+            <p>Peneirado em malha fina • Pronto para plantio</p>
+            <span class="sack-weight">Disponível de 5kg a 500kg</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefícios -->
+  <section id="beneficios" class="section benefits">
+    <div class="container">
+      <div class="section-header">
+        <h2>Por que escolher o esterco curtido AgroVerde?</h2>
+        <p>Esterco fresco queima as raízes e traz sementes de mato. O nosso passa por compostagem rigorosa.</p>
+      </div>
+
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon">🔥</div>
+          <h3>Não Queima as Raízes</h3>
+          <p>Passa por processo completo de fermentação termofílica, estabilizando o pH e a temperatura.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🌾</div>
+          <h3>Zero Sementes de Mato</h3>
+          <p>O calor natural do curtimento elimina sementes de ervas daninhas e patógenos prejudiciais.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">💧</div>
+          <h3>Retenção de Umidade</h3>
+          <p>Melhora a estrutura física do solo, mantendo a terra fofa, aerada e úmida por mais tempo.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">👃</div>
+          <h3>Sem Odor Desagradável</h3>
+          <p>Tem cheiro suave de terra úmida de mata, ideal inclusive para vasos e jardins residenciais.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Catálogo de Produtos -->
+  <section id="catalogo" class="section catalog">
+    <div class="container">
+      <div class="section-header">
+        <h2>Nossos Produtos</h2>
+        <p>Escolha o tamanho ideal para seu vaso, canteiro ou propriedade rural.</p>
+      </div>
+
+      <div class="filters">
+        <button class="filter-btn active" data-filter="todos">Todos</button>
+        <button class="filter-btn" data-filter="jardim">Jardim e Vasos</button>
+        <button class="filter-btn" data-filter="horta">Horta e Pomar</button>
+        <button class="filter-btn" data-filter="atacado">Atacado / Rural</button>
+      </div>
+
+      <div class="products-grid" id="productsGrid">
+        <!-- Renderizado via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Calculadora de Adubo -->
+  <section id="calculadora" class="section calculator-section">
+    <div class="container">
+      <div class="calc-box">
+        <div class="calc-info">
+          <span class="badge-calc">Ferramenta Gratuita</span>
+          <h2>Calculadora de Esterco</h2>
+          <p>Não sabe quantos quilos comprar? Informe o tamanho da área e o tipo de cultivo para calcularmos a dose exata.</p>
+
+          <form id="calcForm" class="calc-form">
+            <div class="form-group">
+              <label for="areaInput">Tamanho da área (em m²):</label>
+              <input type="number" id="areaInput" min="1" max="100000" value="20" required />
+            </div>
+
+            <div class="form-group">
+              <label for="cultivoSelect">Tipo de cultivo:</label>
+              <select id="cultivoSelect">
+                <option value="2">Gramado / Manutenção (2 kg por m²)</option>
+                <option value="4" selected>Horta / Verduras / Canteiros (4 kg por m²)</option>
+                <option value="6">Solo pobre / Preparo pesado (6 kg por m²)</option>
+                <option value="5">Pomar / Frutíferas (5 kg por cova/m²)</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full">Calcular Necessidade</button>
+          </form>
+        </div>
+
+        <div class="calc-result" id="calcResult">
+          <h3>Resultado Recomendado</h3>
+          <div class="result-highlight">
+            <span id="kgResult">80 kg</span>
+            <small>de esterco bovino curtido</small>
+          </div>
+          <p id="suggestionText">Sugestão ideal: <strong>4 sacos de 20kg</strong> (Total: R$ 112,00).</p>
+          <button type="button" class="btn btn-secondary" id="addRecommendedBtn">
+            + Adicionar Sugestão ao Carrinho
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rodapé / Contato -->
+  <footer id="contato" class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>🌿 AgroVerde</h3>
+        <p>Produção própria de esterco bovino curtido, peneirado e ensacado com rigoroso controle de qualidade.</p>
+      </div>
+      <div>
+        <h4>Atendimento</h4>
+        <p>📍 Estrada Rural Km 14 - Zona Rural</p>
+        <p>📞 (41) 99999-0000</p>
+        <p>⏰ Seg a Sáb: 07h às 18h</p>
+      </div>
+      <div>
+        <h4>Formas de Pagamento</h4>
+        <p>Pix (5% de desconto na entrega)</p>
+        <p>Cartão de Crédito e Débito</p>
+        <p>Faturamento para produtores rurais</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 AgroVerde Esterco Orgânico. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Carrinho Lateral (Drawer) -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>Seu Carrinho</h3>
+      <button class="close-cart" id="closeCartBtn">&times;</button>
+    </div>
+
+    <div class="cart-items" id="cartItems">
+      <!-- Itens do carrinho -->
+    </div>
+
+    <div class="cart-footer">
+      <div class="shipping-box">
+        <label for="cepInput">Calcular Frete (CEP):</label>
+        <div class="cep-row">
+          <input type="text" id="cepInput" placeholder="00000-000" maxlength="9" />
+          <button type="button" id="calcShippingBtn">OK</button>
+        </div>
+        <small id="shippingMsg">Frete grátis para compras acima de R$ 250,00</small>
+      </div>
+
+      <div class="totals">
+        <div class="total-row">
+          <span>Subtotal:</span>
+          <span id="subtotalValue">R$ 0,00</span>
+        </div>
+        <div class="total-row">
+          <span>Frete:</span>
+          <span id="shippingValue">A calcular</span>
+        </div>
+        <div class="total-row grand-total">
+          <span>Total:</span>
+          <span id="totalValue">R$ 0,00</span>
+        </div>
+      </div>
+
+      <button class="btn btn-whatsapp btn-full" id="checkoutWhatsAppBtn">
+        📲 Finalizar Pedido no WhatsApp
+      </button>
+    </div>
+  </aside>
+
+  <!-- Toast de Notificação -->
+  <div class="toast" id="toast">Produto adicionado ao carrinho!</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
